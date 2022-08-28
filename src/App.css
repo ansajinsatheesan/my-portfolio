@@ -30,3 +30,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+.header img.logo-img {
+  height: 48px;
+}
+.header nav.navbar {
+  background: #fff;
+  border-radius: 8px;
+  /*  margin-top: 15px; */
+}
+.header .navbar-nav .nav-link {
+  color: #000;
+  font-weight: 400;
+  padding: 0 30px !important;
+}

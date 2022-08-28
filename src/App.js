@@ -1,20 +1,20 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import "./App.css";    
-import Home from './pages/home'
+import React, { useEffect } from "react";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import "./App.css";
+import WebIndex from "./pages/webindex";
+import Home from "./pages/home";
 
-const App = () => { 
-  return ( 
-      <BrowserRouter> 
-          <Routes>  
-              <Route exact path="/" name="Login Page" element={<Home />} /> 
-              {/* <Route exact path="/" name="Login Page" element={<Navigate to={'/login'} />} />
-              <Route path="/forgot-password" name="Forgot Page" element={<ForgotPassword />} />
-              <Route path="/404" name="Page 404" element={<Page404 />} /> */}
-          </Routes>
-      </BrowserRouter>
-  )
-}
 
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" name="Layout" element={<WebIndex to={"/home"} />}>
+          <Route path="home" name="Home" element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;
